@@ -2,6 +2,7 @@
 echo "HELLO WORLD via echo ".$OSTYPE
 pwd
 ls
+wget https://s3.amazonaws.com/touchaponk/CampaignDocs.zip
 ####### Configure environment
 
 set -e            # fail fast
