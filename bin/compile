@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+info "HELLO WORLD!"
 ####### Configure environment
 
 set -e            # fail fast
