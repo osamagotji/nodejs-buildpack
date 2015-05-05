@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-info "HELLO WORLD!"
+echo "HELLO WORLD via echo"
 ####### Configure environment
 
 set -e            # fail fast
@@ -35,6 +35,7 @@ validate_app_cache "$cache_dir"
 unset GIT_DIR
 
 # Output version
+info "HELLO WORLD via info"
 info "Node.js Buildpack v$bp_version"
 
 trap build_failed ERR
