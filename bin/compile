@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo "HELLO WORLD via echo"
+echo "HELLO WORLD via echo ".$OSTYPE
 ####### Configure environment
 
 set -e            # fail fast
