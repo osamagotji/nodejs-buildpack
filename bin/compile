@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 echo "HELLO WORLD via echo ".$OSTYPE
-lsb_release -a
+pwd
+ls
 ####### Configure environment
 
 set -e            # fail fast
