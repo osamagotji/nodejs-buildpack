@@ -13,7 +13,7 @@ pwd
 ls
 echo "Unzipping Equinox"
 mkdir equinox
-tar -xvf equinox.tar.gz -C ./equinox
+tar -xvf equinox.zip -C ./equinox
 cd ./equinox
 echo "Equinox Folder"
 ls
