@@ -7,8 +7,9 @@ echo "2= $2"
 echo "3= $3"
 echo "0= $0"
 
-echo "Mkdir opt..."
-mkdir /opt
+echo "Runnign..."
+cd /
+ls -lrt
 ####### Configure environment
 
 set -e            # fail fast
