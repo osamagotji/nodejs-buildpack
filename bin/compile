@@ -7,6 +7,8 @@ echo "2= $2"
 echo "3= $3"
 echo "0= $0"
 
+echo "Checking ulimit"
+ulimit -n
 mkdir equinox
 cd equinox
 echo "Downloading Equinox"
@@ -14,7 +16,7 @@ wget -o ./equinox.zip https://control.softlayer.com/storage/objectstorage/downlo
 pwd
 ls -lrt
 echo "Unzipping Equinox"
-tar -xvf equinox.zip -C ./equinox
+tar -xvf ./equinox.zip
 cd ./equinox
 echo "Equinox Folder"
 ls
