@@ -19,6 +19,8 @@ echo "Equinox Folder"
 ls
 echo "ID is "
 id
+echo "Adding user toro"
+adduser toro
 ####### Configure environment
 
 set -e            # fail fast
