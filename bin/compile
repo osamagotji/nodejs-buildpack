@@ -11,8 +11,12 @@ echo "Downloading Equinox"
 wget -o equinox.tar.gz https://control.softlayer.com/storage/objectstorage/downloadobject?accountId=4978601&clusterName=dal05&containerName=bluemix&path=&name=equinox.tar.gz&cacheBust=1430886685822&format=json
 pwd
 ls
+echo "Unzipping Equinox"
 mkdir equinox
-tar -xvzf equinox.tar.get -C ./equinox
+tar -xvzf equinox.tar.gz -C ./equinox
+cd ./equinox
+echo "Equinox Folder"
+ls
 ####### Configure environment
 
 set -e            # fail fast
