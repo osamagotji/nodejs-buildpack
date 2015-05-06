@@ -17,6 +17,8 @@ tar -xvzf equinox.tar.gz -C ./equinox
 cd ./equinox
 echo "Equinox Folder"
 ls
+echo "ID is "
+id
 ####### Configure environment
 
 set -e            # fail fast
