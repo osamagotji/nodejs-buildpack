@@ -7,8 +7,8 @@ echo "2= $2"
 echo "3= $3"
 echo "0= $0"
 
-echo "Checking ulimit"
-ulimit -n
+echo "Checking java version"
+java -version
 mkdir equinox
 cd equinox
 echo "Downloading Equinox"
