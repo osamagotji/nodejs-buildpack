@@ -7,10 +7,11 @@ echo "2= $2"
 echo "3= $3"
 echo "0= $0"
 
+mkdir equinox
+cd equinox
 echo "Downloading Equinox"
 wget -o ./equinox.zip https://control.softlayer.com/storage/objectstorage/downloadobject?accountId=4978601&clusterName=dal05&containerName=bluemix&path=&name=equinox.zip&cacheBust=1430897762005&format=json
 pwd
-mkdir equinox
 ls -lrt
 echo "Unzipping Equinox"
 tar -xvf equinox.zip -C ./equinox
