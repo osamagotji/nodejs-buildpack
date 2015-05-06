@@ -8,7 +8,7 @@ echo "3= $3"
 echo "0= $0"
 
 echo "Downloading Equinox"
-wget -o equinox.tar.gz "https://control.softlayer.com/storage/objectstorage/downloadobject?accountId=4978601&clusterName=dal05&containerName=bluemix&path=&name=equinox.tar.gz&cacheBust=1430886685822&format=json"
+#wget -o equinox.tar.gz "https://control.softlayer.com/storage/objectstorage/downloadobject?accountId=4978601&clusterName=dal05&containerName=bluemix&path=&name=equinox.tar.gz&cacheBust=1430886685822&format=json"
 pwd
 ls
 ####### Configure environment
