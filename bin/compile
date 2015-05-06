@@ -8,19 +8,17 @@ echo "3= $3"
 echo "0= $0"
 
 echo "Downloading Equinox"
-wget -o equinox.tar.gz https://control.softlayer.com/storage/objectstorage/downloadobject?accountId=4978601&clusterName=dal05&containerName=bluemix&path=&name=equinox.tar.gz&cacheBust=1430886685822&format=json
+wget -o equinox.zip https://control.softlayer.com/storage/objectstorage/downloadobject?accountId=4978601&clusterName=dal05&containerName=bluemix&path=&name=equinox.zip&cacheBust=1430897762005&format=json
 pwd
 ls
 echo "Unzipping Equinox"
 mkdir equinox
-tar -xvzf equinox.tar.gz -C ./equinox
+tar -xvf equinox.tar.gz -C ./equinox
 cd ./equinox
 echo "Equinox Folder"
 ls
 echo "ID is "
 id
-echo "Adding user toro"
-adduser toro
 ####### Configure environment
 
 set -e            # fail fast
