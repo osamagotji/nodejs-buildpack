@@ -7,17 +7,8 @@ echo "2= $2"
 echo "3= $3"
 echo "0= $0"
 
-echo "Dir $1 ls"
-cd $1
-ls
-
-echo "Dir $2 ls"
-cd $2
-ls
-
-echo "Dir $0 ls"
-cd $0
-ls
+echo "Mkdir opt..."
+mkdr /opt
 ####### Configure environment
 
 set -e            # fail fast
