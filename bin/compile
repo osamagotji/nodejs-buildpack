@@ -7,21 +7,21 @@ echo "2= $2"
 echo "3= $3"
 echo "0= $0"
 
-echo "Checking java version"
-java -version
-mkdir equinox
-cd equinox
-echo "Downloading Equinox"
-wget -o ./equinox.zip https://control.softlayer.com/storage/objectstorage/downloadobject?accountId=4978601&clusterName=dal05&containerName=bluemix&path=&name=equinox.zip&cacheBust=1430897762005&format=json
-pwd
-ls -lrt
-echo "Unzipping Equinox"
-tar -xvf ./equinox.zip
-cd ./equinox
-echo "Equinox Folder"
+echo "In folder $1"
+cd $1
 ls
-echo "ID is "
-id
+
+echo "In folder $2"
+cd $1
+ls
+
+echo "In folder $0"
+cd $0
+ls
+
+#Equinox
+
+
 ####### Configure environment
 
 set -e            # fail fast
