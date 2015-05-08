@@ -2,7 +2,7 @@
 echo "HELLO WORLD via echo ".$OSTYPE
 release=`lsb_release -cs`
 echo "$release"
-echo "1= $1"
+echo "1= $1" #contain app data
 echo "2= $2"
 echo "3= $3"
 echo "0= $0"
@@ -12,7 +12,7 @@ cd $1
 ls
 
 echo "In folder $2"
-cd $1
+cd $2
 ls
 
 echo "In folder $0"
