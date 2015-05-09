@@ -34,7 +34,7 @@ echo "Unzipping Equinox"
 tar -xvf ./equinox.tar
 cd equinox
 echo "Equinox Folder"
-echo pwd
+pwd
 ls
 
 ####### Configure environment
