@@ -33,8 +33,8 @@ ls -lrt
 echo "Unzipping Equinox"
 tar -xvf ./equinox.tar
 cd equinox
-echo "Equinox Folder"
-pwd
+echo "Starting Equinox"
+utils/eqx -b .. af_exam start
 ls
 
 ####### Configure environment
