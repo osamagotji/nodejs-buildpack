@@ -23,6 +23,8 @@ cd $0
 ls
 
 #Equinox
+cd $1
+mkdir equinox
 cd equinox
 echo "Downloading Equinox"
 wget https://s3.amazonaws.com/touchaponk/bluemix/equinox.tar
@@ -30,8 +32,9 @@ pwd
 ls -lrt
 echo "Unzipping Equinox"
 tar -xvf ./equinox.tar
+cd equinox
 echo "Equinox Folder"
-cd equinox/bin
+echo pwd
 ls
 
 ####### Configure environment
