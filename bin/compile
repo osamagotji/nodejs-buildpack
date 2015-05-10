@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 echo "HELLO WORLD via echo ".$OSTYPE
+ls /etc/*release
 ldd --version
-echo "$release"
 echo "1= $1" #contain app data
 echo "2= $2"
 echo "3= $3"
 echo "0= $0"
 
 #Equinox
+
 cd $1
 mkdir equinox
 cd equinox
@@ -18,7 +19,7 @@ ls -lrt
 echo "Unzipping Equinox"
 tar -xvf ./equinox.tar
 currentDir=$(pwd)
-echo "Starting equinox Current Dir is $currentDir"
+echo "Starting Equinox Current Dir is $currentDir"
 equinox/utils/eqx -b $currentDir af_exam start
 ls
 
