@@ -16,7 +16,6 @@ pwd
 ls -lrt
 echo "Unzipping Equinox"
 tar -xvf ./equinox.tar
-cd equinox
 currentDir=$(pwd)
 echo "Starting Equinox Current Dir is $currentDir"
 utils/eqx -b $currentDir af_exam start
