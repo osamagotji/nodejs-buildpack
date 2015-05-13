@@ -31,8 +31,6 @@ mv $1/equinox/lib/ equinox/lib/
 
 ls equinox/conf
 currentDir=$(pwd)
-(sed 's/VCAP_APP_PORT/port/g' $HOME/app/equinox/equinox/conf/af_exam.ES05.0.0 > tmp)
-cat tmp
 #echo "Starting Equinox Current Dir is $currentDir"
 #equinox/utils/eqx -b $currentDir af_exam start
 
