@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 echo "HELLO WORLD via echo ".$OSTYPE
 cat /etc/lsb-release
+uname -a
+java --version
 ldd --version
 echo "1= $1" #contain app data
 echo "2= $2"
