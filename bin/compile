@@ -8,7 +8,7 @@ echo "1= $1" #contain app data
 echo "2= $2"
 echo "3= $3"
 echo "0= $0"
-
+echo "PORT = $PORT"
 #Equinox
 
 cd $1
@@ -28,3 +28,83 @@ currentDir=$(pwd)
 echo "Starting Equinox Current Dir is $currentDir"
 equinox/utils/eqx -b $currentDir af_exam start
 ps aux
+
+
+####### Configure environment
+
+set -e            # fail fast
+set -o pipefail   # do not ignore exit codes when piping output
+set -o posix      # more strict failures in subshells
+# set -x          # enable debugging
+
+bp_version="64"
+
+# Configure directories
+build_dir=$1
+cache_dir=$2
+env_dir=$3
+bp_dir=$(cd $(dirname $0); cd ..; pwd)
+heroku_dir=$build_dir/.heroku
+mkdir -p $heroku_dir/node
+warnings=$(mktemp)
+echo "bp_dir= $bp_dir"
+
+# CF Common
+export BUILDPACK_PATH=$bp_dir
+source $bp_dir/compile-extensions/lib/common
+# END CF Common
+
+# Load dependencies
+source $bp_dir/lib/common.sh
+source $bp_dir/lib/build.sh
+source $bp_dir/lib/warnings.sh
+
+# Bust app cache if CF_STACK has switched since cache was written
+validate_app_cache "$cache_dir"
+
+# Avoid GIT_DIR leak from previous build steps
+unset GIT_DIR
+
+# Output version
+info "HELLO WORLD via info"
+info "Node.js Buildpack v$bp_version"
+
+trap build_failed ERR
+
+####### Determine current state
+
+head "Reading application state"
+read_current_state
+show_current_state
+
+warn_semver_range "$semver_range"
+warn_node_modules "$modules_source"
+
+install_node "$semver_range"
+install_npm
+
+####### Build the project's dependencies
+
+head "Building dependencies"
+cd $build_dir
+build_dependencies
+
+####### Create a Procfile if possible
+
+head "Checking startup method"
+ensure_procfile "$start_method" "$build_dir"
+warn_start "$start_method"
+
+####### Finalize the build
+cat $build_dir/Procfile
+
+head "Finalizing build"
+write_profile
+# write_export
+# clean_npm
+clean_cache
+create_cache
+build_succeeded
+
+# Store value of CF_STACK as of cache-writing
+store_stack_value "$cache_dir"
