@@ -8,7 +8,7 @@ echo "1= $1" #contain app data
 echo "2= $2"
 echo "3= $3"
 echo "0= $0"
-echo "PORT = $PORT"
+echo "PORT = $VCAP_APP_PORT"
 echo "PWD = $PWD"
 echo "HOME = $HOME"
 #Equinox
