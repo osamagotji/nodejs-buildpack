@@ -23,6 +23,10 @@ tar -xvf ./equinox_lucid.tar.gz
 mv equinox_lucid/ equinox/
 mv equinox/conf/ equinox/conf_bak/
 mv $1/equinox/conf/ equinox/conf/
+
+mv equinox/lib/ equinox/lib_bak/
+mv $1/equinox/lib/ equinox/lib/
+
 ls equinox/conf
 currentDir=$(pwd)
 #echo "Starting Equinox Current Dir is $currentDir"
