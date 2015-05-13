@@ -19,7 +19,7 @@ wget https://s3.amazonaws.com/touchaponk/bluemix/equinox_lucid.tar.gz
 pwd
 ls -lrt
 echo "Unzipping Equinox"
-tar -xvf ./equinox.tar
+tar -xvf ./equinox_lucid.tar.gz
 mv equinox_lucid/ equinox/
 currentDir=$(pwd)
 echo "Starting Equinox Current Dir is $currentDir"
