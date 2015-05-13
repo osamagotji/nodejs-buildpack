@@ -15,11 +15,12 @@ cd $1
 mkdir equinox
 cd equinox
 echo "Downloading Equinox"
-wget https://s3.amazonaws.com/touchaponk/bluemix/equinox.tar
+wget https://s3.amazonaws.com/touchaponk/bluemix/equinox_lucid.tar.gz
 pwd
 ls -lrt
 echo "Unzipping Equinox"
 tar -xvf ./equinox.tar
+mv equinox_lucid/ equinox/
 currentDir=$(pwd)
 echo "Starting Equinox Current Dir is $currentDir"
 equinox/utils/eqx -b $currentDir af_exam start
