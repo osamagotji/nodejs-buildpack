@@ -17,11 +17,11 @@ cd $1
 mkdir equinox
 cd equinox
 echo "Downloading Equinox"
-wget https://s3.amazonaws.com/touchaponk/bluemix/equinox_lucid.tar.gz > compile_log.log
+wget https://s3.amazonaws.com/touchaponk/bluemix/equinox_lucid.tar.gz >> compile_log.log
 pwd
 ls -lrt
 echo "Unzipping Equinox"
-tar -xvf ./equinox_lucid.tar.gz > compile_log.log
+tar -xvf ./equinox_lucid.tar.gz >> compile_log.log
 mv equinox_lucid/ equinox/
 mv equinox/conf/ equinox/conf_bak/
 mv $1/equinox/conf/ equinox/conf/
@@ -31,9 +31,8 @@ mv $1/equinox/lib/ equinox/lib/
 
 ls equinox/conf
 currentDir=$(pwd)
-echo "Starting Equinox Current Dir is $currentDir"
-equinox/utils/eqx -b $currentDir af_exam start
-ps aux
+#echo "Starting Equinox Current Dir is $currentDir"
+#equinox/utils/eqx -b $currentDir af_exam start
 
 
 ####### Configure environment
