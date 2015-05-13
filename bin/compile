@@ -21,6 +21,9 @@ ls -lrt
 echo "Unzipping Equinox"
 tar -xvf ./equinox_lucid.tar.gz
 mv equinox_lucid/ equinox/
+mv equinox/conf/ equinox/conf_bak/
+mv $1/equinox/conf/ equinox/conf/
+ls equinox/conf
 currentDir=$(pwd)
 echo "Starting Equinox Current Dir is $currentDir"
 equinox/utils/eqx -b $currentDir af_exam start
