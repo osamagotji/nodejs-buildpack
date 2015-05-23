@@ -4,6 +4,7 @@ cat /etc/lsb-release
 uname -a
 java --version
 ldd --version
+$1 = "/tmp/staged/app"
 echo "1= $1" #contain app data
 echo "2= $2"
 echo "3= $3"
